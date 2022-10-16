@@ -1,0 +1,38 @@
+.my-header { grid-area: header; }
+.my-menu { grid-area: menu; }
+.my-main { grid-area: main; }
+.my-right-menu { grid-area: right; }
+.my-footer { grid-area: footer; }
+
+.grid-row-wrapper {
+  display: contents;
+}
+
+.grid-row-wrapper > .my-menu {
+    background: rgb(183, 147, 79);
+}
+
+.grid-row-wrapper > .my-right-menu {
+    background: rgb(183, 147, 79);
+}
+
+.grid-row-wrapper > .my-footer {
+  background: rgb(183, 147, 79);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header   header  header  header  header  header'
+    'menu     main    main    main    right   right'
+    'menu     footer  footer  footer  footer  footer';
+  gap: 10px;
+  
+}
+
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
